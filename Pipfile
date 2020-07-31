@@ -4,8 +4,28 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pytest = "*"
+requests = "*"
+pytest-cov = "*"
+black = "*"
+pytest-mock = "*"
+mock = "*"
 
 [packages]
+fastapi = "*"
+uvicorn = "*"
+click = "*"
+asyncpg = "*"
+databases = "*"
+psycopg2-binary = "*"
+passlib = "*"
+python-jose = "*"
+bcrypt = "*"
+aiohttp = "*"
+python-multipart = "*"
 
 [requires]
 python_version = "3.8"
+
+[pipenv]
+allow_prereleases = true

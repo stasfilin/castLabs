@@ -1,0 +1,19 @@
+import os
+import sys
+
+
+POSTGRES_USER = os.getenv("POSTGRES_USER")
+POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
+POSTGRES_DB = os.getenv("POSTGRES_DB")
+POSTGRES_PORT = os.getenv("POSTGRES_PORT")
+POSTGRES_HOST = os.getenv("POSTGRES_HOST")
+
+if "pytest" in sys.modules:
+    DATABASE_URL = "sqlite://"
+else:
+    DATABASE_URL = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:{POSTGRES_PORT}/{POSTGRES_DB}"
+
+SECRET_KEY = os.getenv("SECRET_KEY", "SECRET_KEY")
+HASHING_ALGORITHM = os.getenv("HASHING_ALGORITHM", "HS512")
+
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
