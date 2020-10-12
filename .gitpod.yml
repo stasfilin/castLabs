@@ -12,4 +12,4 @@ github:
         pullRequestsFromForks: true
 vscode:
   extensions:
-    - bazelbuild.vscode-bazel
+    - BazelBuild.vscode-bazel@0.4.0:CNqPe08EnThWfsQXBuinsQ==
