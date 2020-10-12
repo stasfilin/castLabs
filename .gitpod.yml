@@ -6,7 +6,7 @@ tasks:
     python3 -m pip install --upgrade pip setuptools wheel pipenv==2018.11.26 &&
     pipenv install --dev --system --deploy
   command: >
-    make test
+    pytest . --cov=src
 github:
     prebuilds:
         pullRequestsFromForks: true
