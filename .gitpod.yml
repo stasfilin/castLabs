@@ -10,3 +10,6 @@ tasks:
 github:
     prebuilds:
         pullRequestsFromForks: true
+vscode:
+  extensions:
+    - bazelbuild.vscode-bazel
